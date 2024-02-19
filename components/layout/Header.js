@@ -4,12 +4,12 @@ import LoginBtn from './LoginBtn';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
 import LogoutBtn from './LogoutBtn';
+import Image from 'next/image';
 
 const raleway = Raleway({ subsets: ['latin'] });
 
 export default async function Header() {
   const session = await getServerSession(authOptions);
-  console.log(session?.user?.name);
 
   return (
     <header className='flex items-center justify-between py-4'>
@@ -19,10 +19,26 @@ export default async function Header() {
         </Link>
       </h1>
       <nav className='flex items-center gap-4'>
-        <Link href='/moa'>moa</Link>
+        <Link href='/moa' className=' text-[#546de5] text-xl'>
+          moa
+        </Link>
         {session ? (
-          <div>
-            <span className='mr-4 text-[#546de5]'>{session.user.name}</span>
+          <div className='flex'>
+            {session.user.image ? (
+              <span className='w-[32px] h-[32px]'>{session.user.image}</span>
+            ) : (
+              <span className='bg-gray-200 w-[32px] h-[32px] rounded-full flex justify-center items-center'>
+                <Image
+                  src='/avatar.svg'
+                  width={25}
+                  height={25}
+                  alt={session.user.name}
+                />
+              </span>
+            )}
+            <span className='ml-2 mr-4 text-lg leading-8'>
+              {session.user.name}
+            </span>
             <LogoutBtn />
           </div>
         ) : (
