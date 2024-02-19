@@ -1,8 +1,8 @@
+import { Inter } from 'next/font/google';
 import { Open_Sans } from 'next/font/google';
 import './globals.css';
-import Header from '@/components/layout/Header';
 
-const sans = Open_Sans({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'MoaList',
@@ -14,9 +14,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='ko' className={sans.className}>
-      <body className='flex flex-col w-full p-2 mx-auto max-w-screen-2xl'>
-        <Header />
+    <html lang='en'>
+      <body className={inter.className}>
         <main>{children}</main>
       </body>
     </html>
