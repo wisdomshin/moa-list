@@ -30,19 +30,29 @@ export default async function Detail(props) {
 
   return (
     <>
-      <b>상세페이지</b>
       <div>
-        <h2>{item.ogTitle}</h2>
-        <img src={item.ogImage} alt={item.ogTitle} />
+        <h2 className='text-xl font-bold'>{item.ogTitle}</h2>
+        <img
+          src={item.ogImage}
+          alt={item.ogTitle}
+          className='mx-auto w-[600px] my-6'
+        />
         <p>{item.ogDesc}</p>
+        <Link
+          href={item.url}
+          target='_blank'
+          className='text-[#546de5] my-4 inline-block'
+        >
+          판매 페이지로 이동하기
+        </Link>
       </div>
-      <div>
-        <Link href={'/moa'}>목록으로</Link>
-        {session?.user.email == find.author ? (
-          <Link href={`/moa/${props.params.slug}/edit`}>수정하기</Link>
-        ) : (
-          <></>
-        )}
+      <div className='flex justify-end gap-2'>
+        <Link
+          href={'/moa'}
+          className='px-2 py-1 rounded-md bg-[#546de5] text-white'
+        >
+          목록으로
+        </Link>
         {session?.user.email == find.author || findRole?.role == 'admin' ? (
           <DeleteBtn id={props.params.slug} />
         ) : (

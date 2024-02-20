@@ -15,9 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='ko' className={sans.className}>
-      <body className='flex flex-col w-full p-2 mx-auto max-w-screen-2xl'>
+      <body className='flex flex-col w-full max-w-screen-xl p-2 mx-auto'>
         <Header />
-        <main>{children}</main>
+        <main className='mt-8'>{children}</main>
       </body>
     </html>
   );

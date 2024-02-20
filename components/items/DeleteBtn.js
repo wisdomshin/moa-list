@@ -10,7 +10,12 @@ export default function DeleteBtn(props) {
         defaultValue={props.id}
         style={{ display: 'none' }}
       />
-      <button type='submit'>삭제</button>
+      <button
+        type='submit'
+        className='px-2 py-1 border border-[#546de5] text-[#546de5] rounded-md'
+      >
+        삭제
+      </button>
     </form>
   );
 }
