@@ -29,9 +29,9 @@ export default async function Detail(props) {
   return (
     <>
       <section>
-        <div className='flex justify-between pb-2 border-b border-gray-200 flex-end'>
+        <div className='flex justify-between'>
           <h2 className='text-2xl font-bold'>{item.ogTitle}</h2>
-          <span className='text-sm text-[#8A8A8A]'>{item.createdAt}</span>
+          <span className='text-sm text-gray-200'>{item.createdAt}</span>
         </div>
         <img
           src={item.ogImage}

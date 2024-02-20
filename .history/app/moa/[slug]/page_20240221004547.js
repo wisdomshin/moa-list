@@ -28,11 +28,8 @@ export default async function Detail(props) {
 
   return (
     <>
-      <section>
-        <div className='flex justify-between pb-2 border-b border-gray-200 flex-end'>
-          <h2 className='text-2xl font-bold'>{item.ogTitle}</h2>
-          <span className='text-sm text-[#8A8A8A]'>{item.createdAt}</span>
-        </div>
+      <div>
+        <h2 className='text-xl font-bold'>{item.ogTitle}</h2>
         <img
           src={item.ogImage}
           alt={item.ogTitle}
@@ -46,7 +43,7 @@ export default async function Detail(props) {
         >
           판매 페이지로 이동하기
         </Link>
-      </section>
+      </div>
       <CommnetList itemId={itemId} />
       <CommentWrite itemId={itemId} />
       <div className='flex justify-end gap-2'>

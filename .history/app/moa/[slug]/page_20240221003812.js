@@ -5,7 +5,6 @@ import { ObjectId } from 'mongodb';
 import Link from 'next/link';
 import DeleteBtn from '@/components/items/DeleteBtn';
 import CommentWrite from '@/components/comment/CommentWrite';
-import CommnetList from '@/components/comment/CommentList';
 
 export default async function Detail(props) {
   let session = await getServerSession(authOptions);
@@ -16,7 +15,6 @@ export default async function Detail(props) {
     .findOne({ _id: new ObjectId(props.params.slug) });
 
   const itemId = JSON.stringify(item._id);
-  // console.log('itemId', itemId);
 
   const find = await db
     .collection('moa')
@@ -28,11 +26,8 @@ export default async function Detail(props) {
 
   return (
     <>
-      <section>
-        <div className='flex justify-between pb-2 border-b border-gray-200 flex-end'>
-          <h2 className='text-2xl font-bold'>{item.ogTitle}</h2>
-          <span className='text-sm text-[#8A8A8A]'>{item.createdAt}</span>
-        </div>
+      <div>
+        <h2 className='text-xl font-bold'>{item.ogTitle}</h2>
         <img
           src={item.ogImage}
           alt={item.ogTitle}
@@ -46,9 +41,8 @@ export default async function Detail(props) {
         >
           판매 페이지로 이동하기
         </Link>
-      </section>
-      <CommnetList itemId={itemId} />
-      <CommentWrite itemId={itemId} />
+      </div>
+      <CommentWrite />
       <div className='flex justify-end gap-2'>
         <Link
           href={'/moa'}
