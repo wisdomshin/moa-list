@@ -6,7 +6,7 @@ export default function CommentWrite({ itemId }) {
   const [comment, setComment] = useState('');
 
   return (
-    <section className='my-12 '>
+    <section className='px-5 my-12'>
       <b className='block'>댓글 쓰기</b>
       <div className='flex my-5'>
         <input

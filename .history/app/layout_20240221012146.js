@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang='ko' className={sans.className}>
       <body className='flex flex-col w-full max-w-screen-xl p-2 mx-auto'>
         <Header />
-        <main className='mt-8 mb-20'>{children}</main>
+        <main className='mt-8 mb-12'>{children}</main>
       </body>
     </html>
   );

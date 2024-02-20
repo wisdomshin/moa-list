@@ -14,7 +14,7 @@ export default function CommnetList({ itemId }) {
   }, [data]);
 
   return (
-    <section className='mt-10 px-5 bg-[#F2F2F2]'>
+    <section className='mt-20 px-5 bg-[#F2F2F2]'>
       {data.length > 0 ? (
         data.map((comment, i) => (
           <p
