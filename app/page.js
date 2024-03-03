@@ -3,7 +3,7 @@ export default function Home() {
     <section
       className='flex border min-h-[700px] shadow-md rounded-md justify-center items-center'
       style={{
-        'background-image': 'url("/img_background03/img_background03@2x.png")',
+        'background-image': 'url("/img_background/img_background.png")',
         'background-color': '#08234D65',
         'background-position': 'center',
         'background-size': 'cover',
