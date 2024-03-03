@@ -42,7 +42,7 @@ export default async function Header() {
             <LogoutBtn />
           </div>
         ) : (
-          <>
+          <div className='flex gap-4'>
             <LoginBtn />
             <Link
               href='/register'
@@ -50,7 +50,7 @@ export default async function Header() {
             >
               회원가입
             </Link>
-          </>
+          </div>
         )}
       </nav>
     </header>
