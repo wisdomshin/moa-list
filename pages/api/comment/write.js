@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     let comment = {
       content: req.body.comment,
       parent: JSON.parse(req.body.id),
-      author: session.user.email,
+      author: session.user.user_id,
       name: session.user.name,
       createdAt: dateTime,
     };

@@ -21,7 +21,7 @@ export const authOptions = {
       //1. 로그인페이지 폼 자동생성해주는 코드
       name: 'credentials',
       credentials: {
-        email: { label: 'email', type: 'text' },
+        user_id: { label: 'user_id', type: 'text' },
         password: { label: 'password', type: 'password' },
       },
 
@@ -32,7 +32,7 @@ export const authOptions = {
         let db = (await connectDB).db('moalist');
         let user = await db
           .collection('user_cred')
-          .findOne({ email: credentials.email });
+          .findOne({ user_id: credentials.user_id });
         if (!user) {
           // console.log('해당 이메일은 없음');
           return null;
@@ -63,7 +63,7 @@ export const authOptions = {
       if (user) {
         token.user = {};
         token.user.name = user.name;
-        token.user.email = user.email;
+        token.user.user_id = user.user_id;
       }
       return token;
     },

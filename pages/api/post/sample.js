@@ -25,12 +25,12 @@ export default async function handler(req, res) {
 
     try {
       const db = (await connectDB).db('moalist');
-      const items = await db.collection('moa').insertOne({
+      const items = await db.collection('sample').insertOne({
         createdAt: dateTime,
         ...req.body,
       });
 
-      return res.status(200).redirect(302, '/moa');
+      return res.status(200).redirect(302, '/sample');
     } catch (err) {
       return res.status(500).json(err);
     }

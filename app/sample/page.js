@@ -12,11 +12,16 @@ export default async function MoaList() {
   const db = (await connectDB).db('moalist');
 
   const items = await db
-    .collection('moa')
+    .collection('sample')
     .find({ author: session?.user.user_id })
     .sort({ createdAt: -1 })
     .toArray();
   const categories = [...new Set(items.map((item) => item.category))];
 
-  return <FilterableItems items={items} categories={categories} />;
+  return (
+    <>
+      <h3 className='mb-4 text-2xl'>sample</h3>
+      <FilterableItems items={items} categories={categories} />
+    </>
+  );
 }

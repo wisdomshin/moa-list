@@ -24,7 +24,7 @@ export default async function Detail(props) {
 
   const findRole = await db
     .collection('user_cred')
-    .findOne({ email: session?.user.email });
+    .findOne({ user_id: session?.user.user_id });
 
   return (
     <>
@@ -56,7 +56,7 @@ export default async function Detail(props) {
         >
           목록으로
         </Link>
-        {session?.user.email == find.author || findRole?.role == 'admin' ? (
+        {session?.user.user_id == find.author || findRole?.role == 'admin' ? (
           <DeleteBtn id={props.params.slug} />
         ) : (
           <></>

@@ -15,10 +15,10 @@ export default async function handler(req, res) {
 
   const findRole = await db
     .collection('user_cred')
-    .findOne({ email: session?.user.email });
+    .findOne({ user_id: session?.user.user_id });
 
   if (req.method == 'POST') {
-    if (session.user.email == find.author || findRole?.role == 'admin') {
+    if (session.user.user_id == find.author || findRole?.role == 'admin') {
       try {
         const item = await db
           .collection('moa')
