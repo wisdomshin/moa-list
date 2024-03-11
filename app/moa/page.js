@@ -14,8 +14,8 @@ export default async function MoaList() {
   const items = await db
     .collection('moa')
     .find({ author: session?.user.email })
+    .sort({ createdAt: -1 })
     .toArray();
-
   const categories = [...new Set(items.map((item) => item.category))];
 
   return <FilterableItems items={items} categories={categories} />;

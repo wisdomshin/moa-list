@@ -12,7 +12,7 @@ export default async function Header() {
   const session = await getServerSession(authOptions);
 
   return (
-    <header className='flex items-center justify-between py-4'>
+    <header className='flex items-center justify-between w-full max-w-screen-xl p-2 py-4 mx-auto'>
       <h1 className='text-3xl font-bold text-[#546de5]'>
         <Link href='/' className={raleway.className}>
           MoaList<i className='bi bi-list-stars'></i>
@@ -21,7 +21,7 @@ export default async function Header() {
       <nav>
         {session ? (
           <div className='flex items-center gap-4'>
-            <Link href='/moa' className=' text-[#546de5] text-xl'>
+            <Link href='/moa' className='text-[#546de5] text-xl'>
               moa
             </Link>
             <div className='flex items-center gap-2'>
