@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   if (req.method == 'POST') {
     const items = await db
       .collection('sample')
-      .find({ author: session?.user.user_id })
+      .find()
       .sort({ createdAt: -1 })
       .toArray();
   }

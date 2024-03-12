@@ -9,10 +9,7 @@ export default async function Write() {
   }
 
   return (
-    <div
-      className='flex flex-col items-center mt-[50px] border py-[80px] min-h-[500px]'
-      style={{ 'box-shadow': '0px 4px 20px 0px #00000033' }}
-    >
+    <div className='flex flex-col items-center mt-[50px] border py-[80px] min-h-[500px] shadow-lg'>
       <div className='w-[600px]'>
         <h4 className='text-xl'>작성하기</h4>
         <form action='/api/post/new' method='POST'>

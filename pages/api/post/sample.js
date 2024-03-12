@@ -1,15 +1,8 @@
 import { connectDB } from '@/util/database';
 import { getDate } from '@/util/date';
-import { getServerSession } from 'next-auth';
-import { authOptions } from '../auth/[...nextauth]';
 import { getUrlMeta } from '@/util/openGraph';
 
 export default async function handler(req, res) {
-  let session = await getServerSession(req, res, authOptions);
-  if (session) {
-    req.body.author = session.user.user_id;
-  }
-
   let dateTime = getDate();
 
   if (req.method == 'POST') {
@@ -19,6 +12,7 @@ export default async function handler(req, res) {
       res.status(400).json('카테고리를 입력해주세요.');
     }
 
+    req.body._id = JSON.parse(JSON.stringify(req.body._id));
     req.body.ogTitle = (await getUrlMeta(req.body.url)).title;
     req.body.ogImage = (await getUrlMeta(req.body.url)).image;
     req.body.ogDesc = (await getUrlMeta(req.body.url)).desc;
