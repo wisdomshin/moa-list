@@ -6,7 +6,7 @@ export default function ItemCard({ item }) {
     <Link href={`/moa/${item._id.toString()}`}>
       <article>
         {item.ogImage ? (
-          <div className='flex items-center justify-center w-full h-[250px] rounded-md shadow-md hover:shadow-xl overflow-hidden'>
+          <div className='flex items-center justify-center w-full h-[200px] lg:h-[250px] rounded-md shadow-md hover:shadow-xl overflow-hidden'>
             <img
               src={item.ogImage}
               width={300}
@@ -19,7 +19,9 @@ export default function ItemCard({ item }) {
             <Image src='/no-image.svg' width={30} height={25} alt='no image' />
           </div>
         )}
-        <div className='mt-2 line-clamp-2'>{item.ogTitle}</div>
+        <div className='mt-2 text-sm md:text-md line-clamp-2'>
+          {item.ogTitle}
+        </div>
       </article>
     </Link>
   );
