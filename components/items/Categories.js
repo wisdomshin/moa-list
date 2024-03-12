@@ -1,6 +1,6 @@
 export default function Categories({ categories, selected, onClick }) {
   return (
-    <ul className='flex gap-4'>
+    <ul className='flex flex-wrap gap-4'>
       {categories.map((category) => (
         <li
           key={category}

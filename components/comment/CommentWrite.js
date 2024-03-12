@@ -10,7 +10,7 @@ export default function CommentWrite({ itemId }) {
       <b className='block'>댓글 쓰기</b>
       <div className='flex my-5'>
         <input
-          className='p-1 mr-2 border rounded-md w-80 grow'
+          className='p-1 mr-2 border rounded-md grow'
           onChange={(e) => {
             setComment(e.target.value);
           }}
