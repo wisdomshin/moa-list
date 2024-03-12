@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='ko' className={`${sans.className} relative h-full`}>
-      <body>
+      <body className='relative h-screen'>
         <Header />
         <main className='w-full max-w-screen-xl p-2 mx-auto mt-8 mb-20'>
           {children}

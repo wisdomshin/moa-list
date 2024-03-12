@@ -7,12 +7,12 @@ export default function MainBg({ items }) {
   const pathname = usePathname();
 
   return (
-    <>
+    <section className=''>
       {pathname === '/' && (
-        <section className='absolute top-0 left-0 w-full h-full -z-10'>
+        <section className='-z-10'>
           <MarqueePage items={items} />
         </section>
       )}
-    </>
+    </section>
   );
 }

@@ -9,5 +9,9 @@ export default async function WrapBackground() {
     .sort({ createdAt: -1 })
     .toArray();
 
-  return <MainBg items={items} />;
+  return (
+    <section className='absolute bottom-0 w-full p-4 pointer-events-none'>
+      <MainBg items={items} />
+    </section>
+  );
 }
