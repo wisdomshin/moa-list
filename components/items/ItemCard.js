@@ -12,6 +12,7 @@ export default function ItemCard({ item }) {
               width={300}
               height={250}
               alt={item.ogTitle}
+              className='duration-300 scale-90 hover:scale-100'
             />
           </div>
         ) : (
@@ -19,7 +20,7 @@ export default function ItemCard({ item }) {
             <Image src='/no-image.svg' width={30} height={25} alt='no image' />
           </div>
         )}
-        <div className='mt-2 text-sm md:text-md line-clamp-2'>
+        <div className='mt-2 text-sm md:text-md lg:text-base line-clamp-2'>
           {item.ogTitle}
         </div>
       </article>

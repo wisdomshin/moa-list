@@ -30,7 +30,10 @@ export default async function Detail(props) {
     <>
       <section>
         <div className='pb-2 border-b border-gray-200'>
-          <h2 className='text-2xl font-bold'>{item.ogTitle}</h2>
+          <h2 className='text-2xl font-bold'>
+            {item.ogTitle}
+            <span className='text-xl text-gray-400'> ({item.category})</span>
+          </h2>
           <span className='block text-right text-sm text-[#8A8A8A] pt-1'>
             {item.createdAt}
           </span>
