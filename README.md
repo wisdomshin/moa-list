@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MOA LIST
 
-## Getting Started
+<p align="center">
+  <br>
+  <img src="./public/readme/moa-list.png">
+  <br>
+</p>
 
-First, run the development server:
+<ul>
+  <li>배포 URL: <a href="https://moa-list.vercel.app" target="_blank
+  ">https://moa-list.vercel.app</a></li>
+  <li>Test ID: test01</li>
+  <li>Test PW: 1234</li>
+</ul>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+목차
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 프로젝트 소개
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+<ul align="justify">
+  <li>나만의 갈망템을 한 곳에서 관리할 수 있는 홈페이지 입니다.</li>
+  <li>url, 카테고리 입력만으로 간단하게 저장할 수 있습니다.</li>
+</ul>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<br>
 
-## Learn More
+## 기술 스택
 
-To learn more about Next.js, take a look at the following resources:
+|  NextJS   |  React   |  Node   |  MongoDB   |  Vercel   | Tailwindcss |  Github   |
+| :-------: | :------: | :-----: | :--------: | :-------: | :---------: | :-------: |
+| ![nextjs] | ![react] | ![node] | ![mongoDB] | ![vercel] | ![tailwind] | ![github] |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<br>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 구현 기능
 
-## Deploy on Vercel
+### NextJS 로그인, 로그아웃 기능
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<img src="./public/readme/login_logout.gif">
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### URL, 카테고리 입력 만으로 간단하게 저장하기
+
+<img src="./public/readme/write.gif">
+
+### 카테고리 별로 모아보기
+
+<img src="./public/readme/category.gif">
+
+### 상세 보기 페이지 내 댓글 입력 및 리스트 구현
+
+<img src="./public/readme/comment.gif">
+
+### 아이템 삭제 기능 구현
+
+<img src="./public/readme/delete.gif">
+
+<br>
+
+## 업데이트 예정
+
+<p align="justify">
+  Typescript 적용 예정
+</p>
+
+<br>
+
+## 라이센스
+
+MIT &copy; [wisdomshin.dev](mailto:wisdomshin.dev@gmail.com)
+
+<!-- Stack Icon Refernces -->
+
+[nextjs]: /public/readme/nextdotjs.svg
+[react]: /public/readme/react.svg
+[node]: /public/readme/nodedotjs.svg
+[mongoDB]: /public/readme/mongodb.svg
+[vercel]: /public/readme/vercel.svg
+[tailwind]: /public/readme/tailwindcss.svg
+[github]: /public/readme/github.svg
